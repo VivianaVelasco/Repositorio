@@ -1,0 +1,57 @@
+{
+  "model": {
+    "type": "Object",
+    "value": {
+      "id": {
+        "type": "incrementNumber",
+        "options": {
+          "from": 1
+        }
+      },
+      "usuarioId": {
+        "type": "randomNumberBetween",
+        "value": [1, 200]
+      },
+      "category": {
+        "type": "Object",
+        "value": {
+          "nombre": {
+            "type": "randomElementInArray",
+            "value": ["Moda", "Belleza", "Salud", "Estilo de Vida"]
+          }
+        }
+      },
+      "title": {
+        "type": "faker",
+        "value": "random.words"
+      },
+      "description": {
+        "type": "faker",
+        "value": "lorem.text"
+      },
+      "publishedAt": {
+        "type": "faker",
+        "value": "date.between",
+        "options": ["2020-01-01", "2022-12-30"]
+      },
+      "user": {
+        "type": "Object",
+        "value": {
+          "firstName": {
+            "type": "faker",
+            "value": "name.firstName"
+          },
+          "lastName": {
+            "type": "faker",
+            "value": "name.lastName"
+          }
+        }
+      },
+      "updatedAt": {
+        "type": "faker",
+        "value": "date.between",
+        "options": ["2020-01-01", "2022-12-30"]
+      }
+    }
+  }
+}
